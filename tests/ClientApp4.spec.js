@@ -14,8 +14,8 @@ test.only('Browser context-validating error login', async ({page})=>
 
 // Grab list of all product
 // wait till all connections are loaded, sometime its flacky, so use below line
-// await page.waitForLoadState('networkidle');
-await page.locator(".card-body b").last().waitFor();
+await page.waitForLoadState('networkidle');
+// await page.locator(".card-body b").last().waitFor();
 
 const titles = await page.locator(".card-body b").allTextContents();
 console.log(titles);
